@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Learn Node.js Basics",
+    "content": "Review core Node.js concepts such as modules, file system operations, and asynchronous code."
+  },
+  {
+    "id": 2,
+    "title": "Practice CLI Arguments",
+    "content": "Create a simple command-line tool that reads commands and arguments from process.argv."
+  },
+  {
+    "id": 3,
+    "title": "Understand Promises",
+    "content": "Practice using async and await with promise-based file system methods."
+  },
+  {
+    "id": 4,
+    "title": "Build Notes App",
+    "content": "Implement list, create, update, and delete operations for a small notes application."
+  },
+  {
+    "id": 5,
+    "title": "Refactor Repository Logic",
+    "content": "Move file reading and writing logic into a separate notes repository module."
+  }
+]
