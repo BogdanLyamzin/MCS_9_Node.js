@@ -1,0 +1,26 @@
+{
+  "name": "topic_04",
+  "version": "1.0.0",
+  "description": "Тема 4 - Статичні файли, форми та завантаження файлів (TypeScript, приклади для викладача)",
+  "type": "module",
+  "scripts": {
+    "start": "tsx ./app.ts",
+    "dev": "tsx watch ./app.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "multer": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.2.0",
+    "@types/node": "^24.13.2",
+    "tsx": "^4.22.4",
+    "typescript": "^5.9.3"
+  }
+}
