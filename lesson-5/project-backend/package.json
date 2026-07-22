@@ -1,0 +1,26 @@
+{
+  "name": "topic_05",
+  "version": "1.0.0",
+  "description": "Express + TypeScript + PostgreSQL demo",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch app.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/app.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.13.2",
+    "@types/pg": "^8.15.5",
+    "tsx": "^4.22.4",
+    "typescript": "^5.9.3"
+  }
+}
