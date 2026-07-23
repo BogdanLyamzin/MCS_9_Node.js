@@ -1,0 +1,37 @@
+@baseUrl = http://localhost:3000
+
+### Список заміток
+GET {{baseUrl}}/api/notes
+
+### Пошук слова в нотатках
+GET {{baseUrl}}/api/notes?search=CLI
+
+### Одна нотатка по id
+GET {{baseUrl}}/api/notes/1
+
+### Додати нотатку
+POST {{baseUrl}}/api/notes
+Content-Type: application/json
+
+{
+    "title": "New note title",
+    "content": "New note content"
+}
+
+### Оновити нотатку по id
+PUT {{baseUrl}}/api/notes/1
+Content-Type: application/json
+
+{
+    "title": "New note title",
+    "content": "New note content"
+}
+
+### Видалити нотатку по id
+DELETE {{baseUrl}}/api/notes/1
+
+### Приклад обробки помилки
+GET {{baseUrl}}/api/types
+
+### Запит на адресу якої немає
+GET {{baseUrl}}/api/users

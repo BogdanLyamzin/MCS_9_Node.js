@@ -8,6 +8,8 @@ services:
       - POSTGRES_PASSWORD:pass
     ports:
       - "5432:5432"
+    volumes:
+      - backend_database_data:/var/lib/postresql/data
   
   backend:
     build:
@@ -18,3 +20,5 @@ services:
       - DATABASE_URL:postgresql://postgres:567234@localhost:5432/rest_app
     ports:
       - "5000:5000"
+    volumes:
+      - backend_upload:/app/upload
