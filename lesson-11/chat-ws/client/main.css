@@ -1,0 +1,31 @@
+
+input[type=text] {
+  width: 300px;
+  border: 1px solid lightseagreen;
+  padding: 5px 10px;
+  color: darkred;
+  font-size: 16px;
+  font-family: 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;
+}
+
+button {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.subscribe .greeting-message {
+  color: darkblue;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Courier New', 'Courier', monospace;
+  margin-top: 20px;
+}
+
+.subscribe .chat-message {
+  color: green;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Courier New', 'Courier', monospace;
+  margin-top: 20px;
+}

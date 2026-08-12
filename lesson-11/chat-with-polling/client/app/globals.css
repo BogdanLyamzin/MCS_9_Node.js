@@ -1,0 +1,19 @@
+:root { color: #18212f; background: #eef3f8; font-family: Arial, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+.chat { width: min(720px, 100%); background: white; border-radius: 18px; box-shadow: 0 12px 40px #28415a22; padding: 28px; }
+h1 { margin: 0 0 8px; }
+.eyebrow { color: #5f44c8; font-weight: 700; margin: 0 0 10px; }
+.status { min-height: 24px; color: #586676; background: #f1f4f7; border-radius: 8px; padding: 8px 10px; }
+.messages { height: 310px; overflow: auto; border: 1px solid #dce3ea; border-radius: 10px; padding: 12px; margin: 16px 0; }
+.empty { color: #687789; text-align: center; margin-top: 120px; }
+.message { padding: 10px 12px; background: #edf6ff; border-radius: 10px; margin-bottom: 8px; }
+.message p { margin: 6px 0 0; }
+time { color: #687789; float: right; font-size: .82rem; }
+form { display: grid; grid-template-columns: 130px 1fr auto auto; gap: 10px; align-items: end; }
+label { display: grid; gap: 5px; font-size: .9rem; font-weight: 700; }
+input, select, button { min-height: 40px; border-radius: 8px; border: 1px solid #b7c5d2; padding: 0 10px; font: inherit; }
+button { color: white; border: 0; background: #5f44c8; cursor: pointer; font-weight: 700; }
+button.secondary { background: #6b7785; }
+@media (max-width: 620px) { form { grid-template-columns: 1fr 1fr; } .message-input { grid-column: span 2; } }
