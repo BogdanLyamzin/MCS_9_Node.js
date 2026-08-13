@@ -1,15 +1,12 @@
 let socket = null;
 let myId = null;
 let myName = null;
-let chatUsers = [];
 
 const login = document.getElementById("login");
 const loginErrorBox = document.getElementById("loginError");
 const nameForm = document.getElementById("nameForm");
 const chat = document.getElementById("chat");
 const userList = document.getElementById("usersList");
-const messageForm = document.getElementById("messageForm");
-const messageList = document.getElementById("messages");
 
 socket = io("http://localhost:3000");
 
@@ -33,22 +30,6 @@ socket.on("disconnect", () => {
   showLoginError("Connect faild. Reload page");
 });
 
-socket.on("users", users => {
-    userList.innerHTML = "";
-    chatUsers = {...users};
-    Object.entries(users).forEach(([id, name])=> {
-        userList.insertAdjacentHTML("beforeend", `
-            <li id=${id} class=${id === myId ? "is-me" : ""}>${name}</li>
-            `)
-    })
-})
-
-socket.on("message", data => {
-  const {author, message} = data;
-  messageList.insertAdjacentHTML("beforeend", `<p class="message ${author === myId ? "is-me" : ""}">${chatUsers[author]}: ${message}</p>`);
-})
-
-
 nameForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const { value: name } = e.target.elements.name;
@@ -61,12 +42,11 @@ nameForm.addEventListener("submit", (e) => {
   enterChat();
 });
 
-messageForm.addEventListener("submit", e => {
-  e.preventDefault();
-  const message = e.target.elements.message.value;
-  socket.emit("message", message);
-  e.target.reset();
+socket.on("users", users => {
+    userList.innerHTML = "";
+    Object.entries(users).forEach(([id, name])=> {
+        userList.insertAdjacentHTML("beforeend", `
+            <li id=${id} class=${id === myId ? "is-me" : ""}>${name}</li>
+            `)
+    })
 })
-
-
-

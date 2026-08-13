@@ -2,7 +2,6 @@
 import express from "express";
 import {Server} from "socket.io";
 import { createServer } from "node:http";
-import { randomUUID } from "node:crypto";
 
 const app = express();
 const httpServer = createServer(app);
@@ -27,15 +26,6 @@ wsServer.on("connection", socket => {
         users[socket.id] = name;
         emitUsers();
     });
-
-    socket.on("message", message => {
-        const chatMessage = {
-            id: randomUUID,
-            author: socket.id,
-            message,
-        };
-        wsServer.emit("message", chatMessage);
-    })
 
     socket.on("disconnect", reason => {
         delete users[socket.id];

@@ -1,0 +1,12 @@
+{
+  "name": "node-deployment-student-deck",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Generator for the Node.js deployment lesson deck",
+  "scripts": {
+    "build": "node build-deck.js"
+  },
+  "dependencies": {
+    "pptxgenjs": "^3.12.0"
+  }
+}
